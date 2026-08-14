@@ -94,6 +94,7 @@ def main():
         save_strategy=config.get("save_strategy", "epoch"),
         eval_strategy=config.get("eval_strategy", "epoch"),
         fp16=config.get("fp16", False),
+        gradient_checkpointing=config.get("gradient_checkpointing", False),
         predict_with_generate=True,
         report_to=[],
     )
