@@ -1,0 +1,21 @@
+model_name: google/flan-t5-small
+max_source_length: 128
+max_target_length: 128
+
+hf_model_repo: null
+
+datasets:
+  folio: tasksource/folio
+  malls: yuan-yang/MALLS-v0
+
+train_subset_size: 32
+eval_subset_size: 8
+
+output_dir: results/dev-run
+per_device_train_batch_size: 2
+per_device_eval_batch_size: 2
+num_train_epochs: 1
+learning_rate: 5.0e-4
+logging_steps: 1
+save_strategy: "no"
+eval_strategy: "no"

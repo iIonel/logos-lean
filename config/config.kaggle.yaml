@@ -1,0 +1,21 @@
+model_name: google/flan-t5-large
+max_source_length: 256
+max_target_length: 256
+
+datasets:
+  folio: tasksource/folio
+  malls: yuan-yang/MALLS-v0
+
+train_subset_size: null
+eval_subset_size: null
+
+output_dir: results/kaggle-run
+per_device_train_batch_size: 8
+per_device_eval_batch_size: 8
+gradient_accumulation_steps: 2
+num_train_epochs: 3
+learning_rate: 3.0e-4
+logging_steps: 50
+save_strategy: "epoch"
+eval_strategy: "epoch"
+fp16: true

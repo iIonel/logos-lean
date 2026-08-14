@@ -1,0 +1,22 @@
+[project]
+name = "logos-lean"
+version = "0.1.0"
+description = "NL/FOL → Lean4: formalizes logical statements, and checks arguments for validity with Lean-kernel-checked proofs."
+requires-python = ">=3.10"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "lean: requires a local Lean toolchain (elan) on PATH -- real compiles",
+]
